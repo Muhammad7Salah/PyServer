@@ -1,0 +1,5 @@
+-- for output
+curl -X POST -H "Content-Type: application/json" -d '{"script_name":"mypy.py"}' http://127.0.0.1:5000/run-script
+
+-- for status code
+curl -s -o /dev/null -w "%{http_code}" -X POST -H "Content-Type: application/json" -d '{"script_name":"mypy.py"}' http://127.0.0.1:5000/run-script
